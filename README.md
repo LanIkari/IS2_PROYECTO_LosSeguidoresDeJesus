@@ -3,6 +3,7 @@
 Los Seguidores de Jesús
 
 * Integrantes:
+
   * Avedaño Villegas Brandon           -> Team Scrum
   * Hernandez Pacheco Said Alejandro   -> Product Owner
   * Mendieta Lozano Eduardo            -> Team Scrum
@@ -10,7 +11,8 @@ Los Seguidores de Jesús
   * Perez Cuevas Fernando              -> Team Scrum
   * Vera Fernandez Diana               -> Team Scrum
   
- * Contacto
+* Contacto
+
   * brandonavendano087@aragon.unam.mx
   * saidhernandez316@aragon.unam.mx
   * eduardomendieta52@aragon.unam.mx
