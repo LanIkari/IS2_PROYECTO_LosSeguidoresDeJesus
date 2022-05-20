@@ -1,7 +1,7 @@
 # IS2_PROYECTO_LosSeguidoresDeJesus
 
-Los Seguidores de Jesús
-
+*Los Seguidores de Jesús*
+---
 * Integrantes:
 
   * Avedaño Villegas Brandon           -> Team Scrum
