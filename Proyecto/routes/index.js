@@ -42,4 +42,32 @@ router.delete('/peliculas/:id', (req, res, next) => {
     });
 });
 
+router.get('/',(req,res,next) =>{
+    res.render('desarrollador')
+})
+
+router.get('/archiDocker',(req,res,next) =>{
+    res.render('archiDocker')
+})
+
+router.get('/contenedor',(req,res,next) =>{
+    res.render('contenedor')
+})
+
+router.get('/direcDocker',(req,res,next) =>{
+    res.render('direcDocker')
+})
+
+router.get('/imgDocker',(req,res,next) =>{
+    res.render('imgDocker')
+})
+
+router.get('/introDocker',(req,res,next) =>{
+    res.render('introDocker')
+})
+
+router.get('/vidaContenedor',(req,res,next) =>{
+    res.render('vidaContenedor')
+})
+
 module.exports = router;
