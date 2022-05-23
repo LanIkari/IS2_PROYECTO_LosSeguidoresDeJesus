@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const Peliculas = require('../config/modelos');
+require('../config/conexion');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/peliculas', (req, res) => {
+  Peliculas.find().then(result => {
+    res.status(200).json({
+      peliculas: result
+    });
+  });
 });
 
 module.exports = router;
