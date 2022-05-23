@@ -11,4 +11,21 @@ router.get('/peliculas', (req, res) => {
     });
 });
 
+router.post('/peliculas', (req, res, next) => {
+    const pelicula = new Peliculas({
+        _id: req.body._id,
+        titulo: req.body.titulo,
+        anno: req.body.anno,
+        genero: req.body.genero,
+        duracion: req.body.duracion,
+        sinopsis: req.body.sinopsis,
+        director: req.body.director,
+        reparto: req.body.reparto
+    });
+    pelicula.save();
+    res.status(200).json({
+        message: 'Producto Agregado'
+    });
+});
+
 module.exports = router;
