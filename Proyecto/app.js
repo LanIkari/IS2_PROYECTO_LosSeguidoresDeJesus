@@ -1,7 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+<<<<<<< HEAD
 
+=======
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var mongoose=require('mongoose');
+mongoose.connect('mongodb+srv://Ikari:<1202945>@dbpeliculas.ovphw.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true});
+>>>>>>> 745cce4426a4bcab81d48bec87deee0bc2f36d5f
 
 
 var indexRouter = require('./routes/index');
