@@ -11,6 +11,14 @@ router.get('/peliculas', (req, res) => {
     });
 });
 
+router.get('/peliculas/:id', (req, res) => {
+    Peliculas.findOne({'_id': req.params.id}).then(result => {
+        res.status(200).json({
+            peliculas: result
+        });
+    });
+});
+
 router.post('/peliculas', (req, res, next) => {
     const pelicula = new Peliculas({
         _id: req.body._id,
@@ -25,6 +33,12 @@ router.post('/peliculas', (req, res, next) => {
     pelicula.save();
     res.status(200).json({
         message: 'Producto Agregado'
+    });
+});
+
+router.delete('/peliculas/:id', (req, res, next) => {
+    Peliculas.deleteOne({'_id': req.params.id}).then(result => {
+        res.status(200).json({message: "Producto eliminado"});
     });
 });
 

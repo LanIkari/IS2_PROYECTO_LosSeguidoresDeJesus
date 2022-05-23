@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const peliculaSchema = new mongoose.Schema({
-    _id: {type: Object, required: true},
+    _id: {type: String, required: true},
     titulo: {type: String, required: true},
     anno: {type: Number, required: true},
     genero: {type: String, required: true},
