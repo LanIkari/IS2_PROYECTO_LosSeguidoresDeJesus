@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://Ikari:<password>@cluster0.ovphw.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://Ikari:<1202945>@dbpeliculas.ovphw.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true});
 
 
 var indexRouter = require('./routes/index');
