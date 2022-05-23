@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose=require('mongoose');
-var Pelicula=require('../modelos/pelicula');
+var Pelicula=require('../config/pelicula');
 
 
 /* GEND POINT get all peliculas*/
