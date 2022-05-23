@@ -1,6 +1,6 @@
 'use strict';
 const mongoose = require('mongoose'),
-    peliculaSchema = require('/config/esquemas').peliculaSchema;
+    peliculaSchema = require('/config/modelos').peliculaSchema;
 
 const models = {
 
