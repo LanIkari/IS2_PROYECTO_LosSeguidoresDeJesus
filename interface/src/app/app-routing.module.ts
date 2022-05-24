@@ -9,7 +9,7 @@ import { IntroDockerComponent } from './intro-docker/intro-docker.component';
 import { VidaContenedorComponent } from './vida-contenedor/vida-contenedor.component';
 
 const routes: Routes = [
-  { path: '/', component: DesarrolladorComponent },
+  { path: '', component: DesarrolladorComponent },
   { path: 'intro', component: IntroDockerComponent },
   { path: 'archidocker', component: ArchiDockerComponent },
   { path: 'contenedor', component: ContenedorComponent },

@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: black;
+}
+
+nav {
+    border-bottom: 5px solid;
+    position: fixed;
+    top: 0;
+}
+
+.titulo {
+    font-size: 1.75em !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.titulo {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin: calc(0.5rem + 1vh);
+}
+
+.titulo:hover {
+    color: black;
+}
+
+div.col-lg-12 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-10 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-8 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-6 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-4 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-3 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-2 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-1 {
+    margin: auto;
+    width: 98% !important;
+}
+
+div.col-lg-12 {
+    margin: auto;
+    width: 98%;
+}
+
+div.col-lg-10 {
+    margin: auto;
+    width: 80%;
+}
+
+div.col-lg-6 {
+    margin: auto;
+    width: 48%;
+}
+
+div.col-lg-4 {
+    margin: auto;
+    width: 30%;
+}
+
+div.col-lg-3 {
+    margin: auto;
+    width: 23%;
+}
+
+div.col-lg-2 {
+    margin: auto;
+    width: 14%;
+}
+
+div.col-lg-1 {
+    margin: auto;
+    width: 8%;
+}
