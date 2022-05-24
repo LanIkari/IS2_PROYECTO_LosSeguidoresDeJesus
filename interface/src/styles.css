@@ -1,114 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-    color: black;
+.container-header {
+  background-color: rgba(142, 209, 252, 0.25);
+  border: none;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
-nav {
-    border-bottom: 5px solid;
-    position: fixed;
-    top: 0;
+.text-justify {
+  text-align: justify;
 }
 
-.titulo {
-    font-size: 1.75em !important;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-}
-
-.titulo {
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    margin: calc(0.5rem + 1vh);
-}
-
-.titulo:hover {
-    color: black;
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
 }
 
 div.col-lg-12 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 98%;
 }
 
 div.col-lg-10 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 80%;
+  padding: 1rem;
 }
 
 div.col-lg-8 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 65%;
+  padding: 1rem;
 }
 
 div.col-lg-6 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 48%;
+  padding: 1rem;
 }
 
 div.col-lg-4 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 30%;
+  padding: 1rem;
 }
 
 div.col-lg-3 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 23%;
+  padding: 1rem;
 }
 
 div.col-lg-2 {
-    margin: auto;
-    width: 98% !important;
+  margin: auto;
+  width: 14%;
+  padding: 1rem;
 }
 
 div.col-lg-1 {
-    margin: auto;
-    width: 98% !important;
-}
-
-div.col-lg-12 {
-    margin: auto;
-    width: 98%;
-}
-
-div.col-lg-10 {
-    margin: auto;
-    width: 80%;
-}
-
-div.col-lg-6 {
-    margin: auto;
-    width: 48%;
-}
-
-div.col-lg-4 {
-    margin: auto;
-    width: 30%;
-}
-
-div.col-lg-3 {
-    margin: auto;
-    width: 23%;
-}
-
-div.col-lg-2 {
-    margin: auto;
-    width: 14%;
-}
-
-div.col-lg-1 {
-    margin: auto;
-    width: 8%;
+  margin: auto;
+  width: 8%;
+  padding: 1rem;
 }

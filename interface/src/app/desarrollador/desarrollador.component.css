@@ -1,0 +1,32 @@
+.card {
+  border: none;
+}
+
+.titulo {
+  margin: 2rem 0 !important;
+}
+
+.card-text {
+  text-align: justify;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.auto-space {
+  justify-content: space-evenly !important;
+}
+
+div.auto-space {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+img{
+  height: auto !important;
+  width: 25vw !important;
+}
+
+div.col-lg-6 {
+  margin-top: 5vh !important;
+  margin-bottom: 5vh !important;
+}

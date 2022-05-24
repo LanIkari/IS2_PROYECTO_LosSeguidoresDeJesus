@@ -1,28 +1,25 @@
-<nav class="navbar bg-light">
+<nav class="navbar container-flex">
   <div class="container-fluid">
-    <a class="titulo" href="/">
-      INGENIERÍA DE SOFTWARE II
-    </a>
+    <a class="titulo" href="">Ingeniería de Software II</a>
   </div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+         aria-expanded="false">
+        Docker
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="/intro">Introducción Docker</a></li>
+        <li><a class="dropdown-item" href="/imgdocker">Imágenes Docker</a></li>
+        <li><a class="dropdown-item" href="/contenedor">Contenedores</a></li>
+        <li><a class="dropdown-item" href="/archidocker">Archivo Docker File</a></li>
+        <li><a class="dropdown-item" href="/direcdocker">Directivas Docker File</a></li>
+        <li><a class="dropdown-item" href="/vidadocker">Ciclo de Vida de los Contenedores</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="apiview">API REST</a>
+    </li>
+  </ul>
 </nav>
-<ul class="nav justify-content-center">
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Docker
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><a class="dropdown-item" href="/intro">Introducción Docker</a></li>
-      <li><a class="dropdown-item" href="/imgdocker">Imágenes Docker</a></li>
-      <li><a class="dropdown-item" href="/contenedor">Contenedores</a></li>
-      <li><a class="dropdown-item" href="/archidocker">Archivo Docker File</a></li>
-      <li><a class="dropdown-item" href="/direcdocker">Directivas Docker File</a></li>
-      <li><a class="dropdown-item" href="/vidadocker">Ciclo de Vida de los Contenedores</a></li>
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">API REST</a>
-  </li>
-</ul>
-
 <router-outlet></router-outlet>

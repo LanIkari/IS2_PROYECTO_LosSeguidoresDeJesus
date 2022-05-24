@@ -12,6 +12,7 @@ import { VidaContenedorComponent } from './vida-contenedor/vida-contenedor.compo
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ApiViewComponent } from './api-view/api-view.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     ImgDockerComponent,
     IntroDockerComponent,
     VidaContenedorComponent,
-    DesarrolladorComponent
+    DesarrolladorComponent,
+    ApiViewComponent
   ],
   imports: [
     BrowserModule,
