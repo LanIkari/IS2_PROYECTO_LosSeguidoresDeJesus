@@ -8,6 +8,7 @@ import {ImgDockerComponent} from './img-docker/img-docker.component';
 import {IntroDockerComponent} from './intro-docker/intro-docker.component';
 import {VidaContenedorComponent} from './vida-contenedor/vida-contenedor.component';
 import {ApiViewComponent} from "./api-view/api-view.component";
+import { UpdateFormComponent } from './update-form/update-form.component';
 
 const routes: Routes = [
   {path: '', component: DesarrolladorComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path: 'direcdocker', component: DirecDockerComponent},
   {path: 'imgdocker', component: ImgDockerComponent},
   {path: 'vidadocker', component: VidaContenedorComponent},
-  {path: 'apiview', component: ApiViewComponent}
+  {path: 'apiview', component: UpdateFormComponent}
 ];
 
 @NgModule({

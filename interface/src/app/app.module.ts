@@ -13,6 +13,8 @@ import { DesarrolladorComponent } from './desarrollador/desarrollador.component'
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ApiViewComponent } from './api-view/api-view.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { UpdateFormComponent } from './update-form/update-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ApiViewComponent } from './api-view/api-view.component';
     IntroDockerComponent,
     VidaContenedorComponent,
     DesarrolladorComponent,
-    ApiViewComponent
+    ApiViewComponent,
+    PostFormComponent,
+    UpdateFormComponent
   ],
   imports: [
     BrowserModule,
