@@ -19,7 +19,8 @@ const routes: Routes = [
   {path: 'direcdocker', component: DirecDockerComponent},
   {path: 'imgdocker', component: ImgDockerComponent},
   {path: 'vidadocker', component: VidaContenedorComponent},
-  {path: 'apiview', component: UpdateFormComponent}
+  {path: 'apiview', component: ApiViewComponent},
+  {path: 'edit', component: UpdateFormComponent}
 ];
 
 @NgModule({

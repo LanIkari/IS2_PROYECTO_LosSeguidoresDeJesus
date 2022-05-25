@@ -15,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ApiViewComponent } from './api-view/api-view.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
+import {PeliculasService} from "./services/peliculas.service";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { UpdateFormComponent } from './update-form/update-form.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PeliculasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
