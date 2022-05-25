@@ -5,17 +5,13 @@ require('../config/conexion');
 //METODO GET
 router.get('/peliculas', (req, res) => {
     Peliculas.find().then(result => {
-        res.status(200).json({
-            peliculas: result
-        });
+        res.status(200).json(result);
     });
 });
 //METODO GET POR ID
 router.get('/peliculas/:id', (req, res) => {
     Peliculas.findOne({'_id': req.params.id}).then(result => {
-        res.status(200).json({
-            peliculas: result
-        });
+        res.status(200).json(result);
     });
 });
 //METODO POST
