@@ -9,7 +9,7 @@ router.get('/peliculas', (req, res) => {
     });
 });
 //METODO GET POR ID
-router.get('/peliculas/:id', (req, res) => {
+router.get('/peliculas/pelicula/:id', (req, res) => {
     Peliculas.findOne({'_id': req.params.id}).then(result => {
         res.status(200).json(result);
     });

@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'vidadocker', component: VidaContenedorComponent},
   {path: 'apiview', component: ApiViewComponent},
   {path: 'agregar', component: PostFormComponent},
-  {path: 'edit/:id', component: UpdateFormComponent}
+  {path: 'pelicula/:id', component: UpdateFormComponent}
 ];
 
 @NgModule({

@@ -16,7 +16,7 @@ export class PeliculasService {
   }
 
   getUnaPelicula(id: string | undefined) {
-    return this.http.get(this.url + 'edit/' + id);
+    return this.http.get(this.url + 'pelicula/' + id);
   }
 
   postPelicula(pelicula: Pelicula) {

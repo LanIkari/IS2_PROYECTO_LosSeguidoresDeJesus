@@ -14,7 +14,10 @@ h1 {
   font-style: italic;
 }
 
-button {
+button.btn-primary {
   background-color: #003f8c;
+}
 
+button.btn-danger {
+  margin-right: 1vw;
 }

@@ -30,12 +30,6 @@ export class ApiViewComponent implements OnInit {
     );
   }
 
-  editar(index: number) {
-    // @ts-ignore
-    var id: string = index.toString();
-    this.router.navigate(['edit/' + id])
-  }
-
   eliminar(index: number) {
     // @ts-ignore
     var id: string = this.ListarPeliculas[index]._id;
@@ -46,5 +40,9 @@ export class ApiViewComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  editar(id:any) {
+    this.router.navigate(['pelicula/'+id]);
   }
 }

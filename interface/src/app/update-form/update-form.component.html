@@ -1,19 +1,26 @@
 <div class="container-fluid">
-  <h1>Actualizar pelicula</h1>
+  <h1>Actualizar Película</h1>
   <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
       <form action="">
-        <input type="text" class="input-form form-control" name="titulo" required placeholder="Título">
-        <input type="text" class="input-form form-control" name="año" required placeholder="Año">
-        <input type="text" class="input-form form-control" name="genero" required placeholder="Género">
-        <input type="text" class="input-form form-control" name="duracion" required placeholder="Duración">
-        <textarea type="text" class="input-form form-control" name="sinopsis" required
+        <input type="text" class="input-form form-control" name="titulo" [(ngModel)]="pelicula.titulo" required
+               placeholder="Título">
+        <input type="text" class="input-form form-control" name="anno" [(ngModel)]="pelicula.anno" required
+               placeholder="Año">
+        <input type="text" class="input-form form-control" name="genero" [(ngModel)]="pelicula.genero" required
+               placeholder="Género">
+        <input type="text" class="input-form form-control" name="duracion" [(ngModel)]="pelicula.duracion" required
+               placeholder="Duración">
+        <textarea type="text" class="input-form form-control" name="sinopsis" [(ngModel)]="pelicula.sinopsis" required
                   placeholder="Sinopsis"></textarea>
-        <input type="text" class="input-form form-control" name="director" placeholder="Director">
-        <input type="text" class="input-form form-control" name="reparto" placeholder="Reparto">
+        <input type="text" class="input-form form-control" name="director" [(ngModel)]="pelicula.director"
+               placeholder="Director">
+        <input type="text" class="input-form form-control" name="reparto" [(ngModel)]="pelicula.reparto"
+               placeholder="Reparto">
         <div class="container-flex">
-          <button class="btn btn-primary" type="submit">Actualizar</button>
+          <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+          <button class="btn btn-primary" (click)="actualizar()">Actualizar</button>
         </div>
       </form>
     </div>

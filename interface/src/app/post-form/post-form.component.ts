@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  @HostBinding('class') clasesss = 'row';
+  @HostBinding('class') clasess = 'row';
   pelicula: Pelicula = {
     _id: '',
     titulo: '',
@@ -28,6 +28,10 @@ export class PostFormComponent implements OnInit {
 
   agregarPelicula() {
     this.peliculasService.postPelicula(this.pelicula).subscribe();
+    this.router.navigate(['apiview']);
+  }
+
+  cancelar() {
     this.router.navigate(['apiview']);
   }
 }

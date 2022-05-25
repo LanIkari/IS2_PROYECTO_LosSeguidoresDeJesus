@@ -21,6 +21,7 @@
         <input type="text" class="input-form form-control" name="reparto" [(ngModel)]="pelicula.reparto"
                placeholder="Reparto">
         <div class="container-flex">
+          <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
           <button class="btn btn-primary" (click)="agregarPelicula()">Agregar</button>
         </div>
       </form>
