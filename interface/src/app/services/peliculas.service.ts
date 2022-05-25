@@ -19,8 +19,8 @@ export class PeliculasService {
     return this.http.get(this.url + 'edit/' + id);
   }
 
-  postPelicula(equipo: Pelicula) {
-    return this.http.post(this.url, equipo);
+  postPelicula(pelicula: Pelicula) {
+    return this.http.post(this.url, pelicula);
   }
 
   deletePelicula(id: string) {
@@ -34,7 +34,7 @@ export class PeliculasService {
 
 
 export interface Pelicula {
-  id?: string;
+  _id?: string;
   titulo?: string;
   anno?: string;
   genero?: string;

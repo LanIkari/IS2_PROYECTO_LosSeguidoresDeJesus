@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
+      <div class="container-flex">
+        <button class="btn btn-success"><a routerLink="/agregar">Agregar <i class="bi bi-plus-lg"></i></a></button>
+      </div>
       <table class="table">
         <thead>
         <tr>
@@ -19,12 +22,12 @@
         </thead>
         <tbody>
         <tr *ngFor="let pelicula of ListarPeliculas; let i = index">
-          <th scope="row">{{pelicula.id}}</th>
+          <th scope="row" style="vertical-align: middle">{{pelicula._id}}</th>
           <td>{{pelicula.titulo}}</td>
           <td>{{pelicula.anno}}</td>
           <td>{{pelicula.genero}}</td>
           <td>{{pelicula.duracion}}</td>
-          <td>{{pelicula.sinopsis}}</td>
+          <td class="text-justify">{{pelicula.sinopsis}}</td>
           <td>{{pelicula.director}}</td>
           <td>{{pelicula.reparto}}</td>
           <td>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Pelicula, PeliculasService} from "../services/peliculas.service";
 import {Router} from "@angular/router";
 
@@ -11,9 +11,10 @@ import {Router} from "@angular/router";
 
 export class ApiViewComponent implements OnInit {
 
-  ListarPeliculas: Pelicula[]=[];
+  ListarPeliculas: Pelicula[] = [];
 
-  constructor(private peliculasService:PeliculasService, private router:Router) { }
+  constructor(private peliculasService: PeliculasService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.listarPeliculas();
@@ -31,13 +32,13 @@ export class ApiViewComponent implements OnInit {
 
   editar(index: number) {
     // @ts-ignore
-    var id:string= index.toString();
-    this.router.navigate(['/' + id])
+    var id: string = index.toString();
+    this.router.navigate(['edit/' + id])
   }
 
-  eliminar(index:number) {
+  eliminar(index: number) {
     // @ts-ignore
-    var id:string= this.ListarEquipo[index].id_equipo;
+    var id: string = this.ListarPeliculas[index]._id;
     this.peliculasService.deletePelicula(id).subscribe(
       res => {
         console.log('Equipo eliminado');

@@ -1,19 +1,27 @@
 <div class="container-fluid">
-  <h1>Agregar pelicula</h1>
+  <h1>Agregar Película</h1>
   <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-      <form action="">
-        <input type="text" class="input-form form-control" name="id" required placeholder="id">
-        <input type="text" class="input-form form-control" name="titulo" required placeholder="titulo">
-        <input type="date" class="input-form form-control" name="año" required placeholder="año">
-        <input type="text" class="input-form form-control" name="genero" required placeholder="genero">
-        <input type="text" class="input-form form-control" name="duracion" required placeholder="duracion">
-        <textarea type="text" class="input-form form-control" name="sinopsis" required placeholder="sinopsis"></textarea>
-        <input type="text" class="input-form form-control" name="director"  placeholder="director">
-        <input type="text" class="input-form form-control" name="reparto"  placeholder="reparto">
+      <form action="http://localhost:4200" method="post">
+        <input type="text" class="input-form form-control" name="_id" [(ngModel)]="pelicula._id" required
+               placeholder="Id">
+        <input type="text" class="input-form form-control" name="titulo" [(ngModel)]="pelicula.titulo" required
+               placeholder="Título">
+        <input type="text" class="input-form form-control" name="año" [(ngModel)]="pelicula.anno" required
+               placeholder="Año">
+        <input type="text" class="input-form form-control" name="genero" [(ngModel)]="pelicula.genero" required
+               placeholder="Género">
+        <input type="text" class="input-form form-control" name="duracion" [(ngModel)]="pelicula.duracion" required
+               placeholder="Duración">
+        <textarea type="text" class="input-form form-control" name="sinopsis" [(ngModel)]="pelicula.sinopsis" required
+                  placeholder="Sinopsis"></textarea>
+        <input type="text" class="input-form form-control" name="director" [(ngModel)]="pelicula.director"
+               placeholder="Director">
+        <input type="text" class="input-form form-control" name="reparto" [(ngModel)]="pelicula.reparto"
+               placeholder="Reparto">
         <div class="container-flex">
-          <button class="btn btn-primary" type="submit">Agregar</button>
+          <button class="btn btn-primary" (click)="agregarPelicula()">Agregar</button>
         </div>
       </form>
     </div>

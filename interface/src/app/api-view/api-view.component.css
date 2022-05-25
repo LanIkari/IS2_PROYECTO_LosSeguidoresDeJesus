@@ -1,0 +1,26 @@
+table {
+  text-align: center;
+}
+
+td {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  vertical-align: middle !important;
+}
+
+div.container-flex {
+  justify-content: flex-end !important;
+}
+
+button.btn-success {
+  margin-right: 0.75vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+i {
+  color: white;
+}
