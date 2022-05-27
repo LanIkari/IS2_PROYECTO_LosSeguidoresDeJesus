@@ -20,7 +20,7 @@ export class PeliculasService {
   }
 
   postPelicula(pelicula: Pelicula) {
-    return this.http.post(this.url, pelicula);
+    return this.http.post(this.url + 'add', pelicula);
   }
 
   deletePelicula(id: string) {
