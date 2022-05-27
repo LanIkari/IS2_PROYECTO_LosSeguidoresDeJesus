@@ -1,3 +1,4 @@
 /Proyecto/.idea/
-/Proyecto/node_modules/
 /interface/node_modules/
+/Proyecto/node_modules/
+.gitignore

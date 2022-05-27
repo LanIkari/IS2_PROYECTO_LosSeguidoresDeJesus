@@ -15,7 +15,7 @@ router.get('/peliculas/pelicula/:id', (req, res) => {
     });
 });
 //METODO POST
-router.post('/peliculas', (req, res, next) => {
+router.post('/peliculas/add', (req, res, next) => {
     const pelicula = new Peliculas({
         _id: req.body._id,
         titulo: req.body.titulo,
@@ -98,11 +98,11 @@ router.delete('/peliculas/:id', (req, res, next) => {
     });
 });
 
-router.get('/', (req, res, next) => {
+router.get('/desarrollador', (req, res, next) => {
     res.render('desarrollador')
 })
 
-router.get('/archiDocker', (req, res, next) => {
+router.get('/archidocker', (req, res, next) => {
     res.render('archiDocker')
 })
 
@@ -110,19 +110,19 @@ router.get('/contenedor', (req, res, next) => {
     res.render('contenedor')
 })
 
-router.get('/direcDocker', (req, res, next) => {
+router.get('/direcdocker', (req, res, next) => {
     res.render('direcDocker')
 })
 
-router.get('/imgDocker', (req, res, next) => {
+router.get('/imgdocker', (req, res, next) => {
     res.render('imgDocker')
 })
 
-router.get('/introDocker', (req, res, next) => {
+router.get('/introdocker', (req, res, next) => {
     res.render('introDocker')
 })
 
-router.get('/vidaContenedor', (req, res, next) => {
+router.get('/vidacontenedor', (req, res, next) => {
     res.render('vidaContenedor')
 })
 
