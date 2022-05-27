@@ -8,20 +8,20 @@ import {ImgDockerComponent} from './img-docker/img-docker.component';
 import {IntroDockerComponent} from './intro-docker/intro-docker.component';
 import {VidaContenedorComponent} from './vida-contenedor/vida-contenedor.component';
 import {ApiViewComponent} from "./api-view/api-view.component";
-import { UpdateFormComponent } from './update-form/update-form.component';
+import {UpdateFormComponent} from './update-form/update-form.component';
 import {PostFormComponent} from "./post-form/post-form.component";
 
 const routes: Routes = [
-  {path: '', component: DesarrolladorComponent},
-  {path: 'intro', component: IntroDockerComponent},
+  {path: '', redirectTo: '/desarrollador', pathMatch: 'full'},
+  {path: 'introdocker', component: IntroDockerComponent},
   {path: 'archidocker', component: ArchiDockerComponent},
   {path: 'contenedor', component: ContenedorComponent},
   {path: 'desarrollador', component: DesarrolladorComponent},
   {path: 'direcdocker', component: DirecDockerComponent},
   {path: 'imgdocker', component: ImgDockerComponent},
-  {path: 'vidadocker', component: VidaContenedorComponent},
-  {path: 'apiview', component: ApiViewComponent},
-  {path: 'agregar', component: PostFormComponent},
+  {path: 'vidacontenedor', component: VidaContenedorComponent},
+  {path: 'peliculas', component: ApiViewComponent},
+  {path: 'peliculas/add', component: PostFormComponent},
   {path: 'pelicula/:id', component: UpdateFormComponent}
 ];
 

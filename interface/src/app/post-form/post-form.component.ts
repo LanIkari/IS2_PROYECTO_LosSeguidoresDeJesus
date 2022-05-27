@@ -28,10 +28,10 @@ export class PostFormComponent implements OnInit {
 
   agregarPelicula() {
     this.peliculasService.postPelicula(this.pelicula).subscribe();
-    this.router.navigate(['apiview']);
+    this.router.navigate(['pelicula']);
   }
 
   cancelar() {
-    this.router.navigate(['apiview']);
+    this.router.navigate(['pelicula']);
   }
 }

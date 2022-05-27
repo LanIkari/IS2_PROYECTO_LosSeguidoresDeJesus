@@ -47,10 +47,10 @@ export class UpdateFormComponent implements OnInit {
       },
       error => console.log(error)
     );
-    this.router.navigate(['apiview']);
+    this.router.navigate(['peliculas']);
   }
 
   cancelar() {
-    this.router.navigate(['apiview']);
+    this.router.navigate(['peliculas']);
   }
 }
