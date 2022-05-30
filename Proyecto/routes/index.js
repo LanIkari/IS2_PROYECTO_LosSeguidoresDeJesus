@@ -148,4 +148,13 @@ router.get('/vidacontenedor', (req, res, next) => {
     res.render('vidacontenedor')
 })
 
+//!Path para POST formulario
+router.get('/addform', (req, res, next) => {
+    res.render('addform')
+})
+
+//^Path para apiview
+router.get('/apiview', (req, res, next) => {
+    res.render('apiview')
+})
 module.exports = router;
