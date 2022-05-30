@@ -181,17 +181,40 @@ router.post('/addform', (req, res, next) => {
     res.redirect(route);
 });
 
+//!Path para GET formulario
+router.get('/updateform/:id', (req, res, next) => {
+    Peliculas.findOne({'_id': req.params.id}).then(result => {
+        res.render('updateform', {result});
+    });
+});
+
+router.put('/updateform/:id', (req, res, next) => {
+    var route = "/apiview";
+    Peliculas.findByIdAndUpdate({'_id': req.params.id}, {
+        id: req.params.id,
+        titulo: req.body.titulo,
+        anno: req.body.anno,
+        genero: req.body.genero,
+        duracion: req.body.duracion,
+        sinopsis: req.body.sinopsis,
+        director: req.body.director,
+        reparto: req.body.reparto
+    }, function (err, result) {
+        if (err) {
+            console.log(err)
+        } else {
+            res.status(200)
+            res.redirect(route);
+        }
+    });
+});
+
 router.delete('/apiview/:id', (req, res, next) => {
     var route = "/apiview";
     Peliculas.deleteOne({'_id': req.params.id}).then(result => {
         res.status(200);
         res.redirect(route);
     });
-});
-
-//!Path para GET formulario
-router.get('/updateform', (req, res, next) => {
-    res.render('updateform')
 });
 
 module.exports = router;

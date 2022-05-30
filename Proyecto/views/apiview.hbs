@@ -3,8 +3,11 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
             <div class="container-flex-end">
-                <button class="btn btn-success"><a href="addform" class="a-btn">Agregar <i
-                        class="bi bi-plus-lg"></i></a></button>
+                <button class="btn btn-success">
+                    <a href="addform" class="a-btn">Agregar
+                        <i class="bi bi-plus-lg"></i>
+                    </a>
+                </button>
             </div>
             <table class="table">
                 <thead>
@@ -33,15 +36,19 @@
                         <td>{{this.director}}</td>
                         <td>{{this.reparto}}</td>
                         <td>
-                            <button type="button" class="btn btn-warning">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
+                            <form action="" method="GET">
+                                <button type="button" class="btn btn-warning">
+                                    <a href="/updateform/{{this._id}}" class="a-btn">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </button>
+                            </form>
                         </td>
                         <td>
                             <form action="/apiview/{{_id}}?_method=DELETE" method="POST">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger" name="id" value="{{this._id}}">
-                                        <i class="bi bi-trash3-fill"></i>
+                                    <i class="bi bi-trash3-fill"></i>
                                 </button>
                             </form>
                         </td>
