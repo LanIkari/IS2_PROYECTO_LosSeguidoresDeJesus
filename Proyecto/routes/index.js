@@ -1,7 +1,28 @@
 const express = require('express');
+const cors = require('cors');
 const router = express.Router();
 const Peliculas = require('../config/esquemas');
 require('../config/conexion');
+
+
+const whitelist = ['http://localhost:4200/', 'http://localhost:4200/peliculas'];
+const options = {
+    options: (origin, callback) => {
+        if (whitelist.includes(origin)) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
+        }
+    }
+}
+router.use(cors());
+router.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, PUT, OPTIONS");
+    next();
+});
+
 //METODO GET
 router.get('/peliculas', (req, res) => {
     Peliculas.find().then(result => {
