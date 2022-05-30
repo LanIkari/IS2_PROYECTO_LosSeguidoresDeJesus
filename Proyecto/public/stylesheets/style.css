@@ -1,7 +1,7 @@
 @import url('navbar.style.css');
 @import url('desarrollador.style.css');
 @import url('forms.style.css');
-@import url(apiview.style.css);
+@import url('apiview.style.css');
 /*Estilos Generales*/
 * {
   font-family: 'Poppins', sans-serif;
@@ -33,12 +33,26 @@ body {
 }
 
 .text-justify {
-  text-align: justify;
+  text-align: justify !important;
 }
 
-.container-flex {
-  display: flex;
+.container-flex-center {
+  display: flex !important;
   justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.container-flex-end {
+  display: flex !important;
+  justify-content: flex-end;
+  align-content: flex-end;
+  flex-direction: row;
+}
+
+.container-flex-evenly {
+  display: flex !important;
+  justify-content: space-evenly !important;
   align-content: center;
   flex-direction: row;
 }
