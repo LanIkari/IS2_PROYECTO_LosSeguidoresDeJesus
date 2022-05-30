@@ -1,6 +1,5 @@
-/Proyecto/.idea/
-/interface/node_modules/
-/Proyecto/node_modules/
 .gitignore
-/interface/.vscode/
 /.idea/
+/.vscode/
+/Proyecto/node_modules/
+/interface/node_modules/
