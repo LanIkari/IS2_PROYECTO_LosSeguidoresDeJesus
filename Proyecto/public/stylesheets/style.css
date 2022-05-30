@@ -1,6 +1,7 @@
 @import url('navbar.style.css');
 @import url('desarrollador.style.css');
 @import url('forms.style.css');
+@import url(apiview.style.css);
 /*Estilos Generales*/
 * {
   font-family: 'Poppins', sans-serif;
