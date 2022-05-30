@@ -2,3 +2,5 @@
 /interface/node_modules/
 /Proyecto/node_modules/
 .gitignore
+/interface/.vscode/
+/.idea/

@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const Peliculas = require('../config/esquemas');
 require('../config/conexion');
 //METODO GET
@@ -48,7 +48,7 @@ router.put('/peliculas/:id', (req, res) => {
         }
         if (!result) {
             res.status(404).json({message: "Pelicula no encontrada"})
-            var pelicula = Peliculas({
+            const pelicula = Peliculas({
                 _id: req.params.id,
                 titulo: req.body.titulo,
                 anno: req.body.anno,
@@ -98,12 +98,13 @@ router.delete('/peliculas/:id', (req, res, next) => {
     });
 });
 
-router.get('/desarrollador', (req, res, next) => {
-    res.render('desarrollador')
-})
+
+router.get('/',(req, res) => {
+    res.render('index');
+});
 
 router.get('/archidocker', (req, res, next) => {
-    res.render('archiDocker')
+    res.render('archidocker')
 })
 
 router.get('/contenedor', (req, res, next) => {
@@ -111,19 +112,19 @@ router.get('/contenedor', (req, res, next) => {
 })
 
 router.get('/direcdocker', (req, res, next) => {
-    res.render('direcDocker')
+    res.render('direcdocker')
 })
 
 router.get('/imgdocker', (req, res, next) => {
-    res.render('imgDocker')
+    res.render('imgdocker')
 })
 
 router.get('/introdocker', (req, res, next) => {
-    res.render('introDocker')
+    res.render('introdocker')
 })
 
 router.get('/vidacontenedor', (req, res, next) => {
-    res.render('vidaContenedor')
+    res.render('vidacontenedor')
 })
 
 module.exports = router;
