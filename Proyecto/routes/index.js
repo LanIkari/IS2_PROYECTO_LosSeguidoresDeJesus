@@ -189,4 +189,9 @@ router.delete('/apiview/:id', (req, res, next) => {
     });
 });
 
+//!Path para GET formulario
+router.get('/updateform', (req, res, next) => {
+    res.render('updateform')
+});
+
 module.exports = router;
