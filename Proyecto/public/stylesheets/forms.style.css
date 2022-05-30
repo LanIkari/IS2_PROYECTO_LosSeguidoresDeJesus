@@ -1,9 +1,9 @@
 input {
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
 }
 
 textarea {
-    resize: none;
+    resize: none !important;
     height: 30vh;
 }
 

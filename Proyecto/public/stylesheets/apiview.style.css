@@ -1,11 +1,12 @@
 table {
-    text-align: center;
+    text-align: center !important;
 }
 
 td {
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 3vh !important;
+    padding-bottom: 3vh !important;
     vertical-align: middle !important;
+    text-align: center !important;
 }
 
 div.container-flex {
@@ -13,14 +14,18 @@ div.container-flex {
 }
 
 button.btn-success {
-    margin-right: 0.75vw;
+    margin-right: 0.75vw !important;
+    margin-bottom: 3vh !important;
 }
 
 a {
-    color: white;
     text-decoration: none !important;
 }
 
 i {
-    color: white;
+    color: white !important;
+}
+
+a.a-btn {
+    color: white !important;
 }
