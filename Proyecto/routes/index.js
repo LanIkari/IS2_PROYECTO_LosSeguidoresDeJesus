@@ -155,6 +155,11 @@ router.get('/addform', (req, res, next) => {
 
 //^Path para apiview
 router.get('/apiview', (req, res, next) => {
-    res.render('apiview')
+    // const peliculas = Peliculas.find();
+    // res.render('apiview', {peliculas})
+    Peliculas.find().then(result => {
+        res.status(200);
+        res.render('apiview', {result})
+    });
 })
 module.exports = router;

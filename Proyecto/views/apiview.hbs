@@ -22,15 +22,16 @@
                 </tr>
                 </thead>
                 <tbody>
+                {{#each result}}
                 <tr>
-                    <th scope="row" style="vertical-align: middle">pelicula._id</th>
-                    <td>pelicula.titulo</td>
-                    <td>pelicula.anno</td>
-                    <td>pelicula.genero</td>
-                    <td>pelicula.duracion</td>
-                    <td class="text-justify">pelicula.sinopsis</td>
-                    <td>pelicula.director</td>
-                    <td>pelicula.reparto</td>
+                    <th scope="row" style="vertical-align: middle">{{this._id}}</th>
+                    <td>{{this.titulo}}</td>
+                    <td>{{this.anno}}</td>
+                    <td>{{this.genero}}</td>
+                    <td>{{this.duracion}}</td>
+                    <td class="text-justify">{{this.sinopsis}}</td>
+                    <td>{{this.director}}</td>
+                    <td>{{this.reparto}}</td>
                     <td>
                         <button type="button" class="btn btn-warning">
                             <i class="bi bi-pencil-square"></i>
@@ -41,6 +42,7 @@
                             <i class="bi bi-trash3-fill"></i></button>
                     </td>
                 </tr>
+                {{/each}}
                 </tbody>
             </table>
         </div>
