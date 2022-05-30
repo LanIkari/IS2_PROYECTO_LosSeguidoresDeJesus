@@ -120,7 +120,7 @@ router.delete('/peliculas/:id', (req, res, next) => {
 });
 
 
-router.get('/',(req, res) => {
+router.get('/', (req, res) => {
     res.render('index');
 });
 
@@ -148,11 +148,6 @@ router.get('/vidacontenedor', (req, res, next) => {
     res.render('vidacontenedor')
 })
 
-//!Path para POST formulario
-router.get('/addform', (req, res, next) => {
-    res.render('addform')
-})
-
 //^Path para apiview
 router.get('/apiview', (req, res, next) => {
     // const peliculas = Peliculas.find();
@@ -161,5 +156,31 @@ router.get('/apiview', (req, res, next) => {
         res.status(200);
         res.render('apiview', {result})
     });
-})
+});
+
+//!Path para GET formulario
+router.get('/addform', (req, res, next) => {
+    res.render('addform')
+});
+
+// método POST para agregar peliculas
+router.post('/addform', (req, res, next) => {
+    var route = "/apiview";
+    const pelicula = new Peliculas({
+        _id: req.body._id,
+        titulo: req.body.titulo,
+        anno: req.body.anno,
+        genero: req.body.genero,
+        duracion: req.body.duracion,
+        sinopsis: req.body.sinopsis,
+        director: req.body.director,
+        reparto: req.body.reparto
+    });
+    pelicula.save();
+    res.status(200);
+    res.redirect(route);
+});
+
+
+
 module.exports = router;

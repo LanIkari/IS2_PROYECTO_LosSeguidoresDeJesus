@@ -3,16 +3,16 @@
     <div class="row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-            <form action="" method="post">
+            <form action="http://localhost:3000/addform" method="post">
                 <input type="text" class="input-form form-control" name="_id" required
                        placeholder="Id">
-                <input type="text" class="input-form form-control" name="titulo"  required
+                <input type="text" class="input-form form-control" name="titulo" required
                        placeholder="Título">
-                <input type="text" class="input-form form-control" name="año"  required
+                <input type="text" class="input-form form-control" name="anno" required
                        placeholder="Año">
-                <input type="text" class="input-form form-control" name="genero"  required
+                <input type="text" class="input-form form-control" name="genero" required
                        placeholder="Género">
-                <input type="text" class="input-form form-control" name="duracion"  required
+                <input type="text" class="input-form form-control" name="duracion" required
                        placeholder="Duración">
                 <textarea type="text" class="input-form form-control" name="sinopsis" required
                           placeholder="Sinopsis"></textarea>
@@ -22,7 +22,7 @@
                        placeholder="Reparto">
                 <div class="container-flex">
                     <button class="btn btn-danger"><a href="apiview" class="a-btn">Cancelar</a></button>
-                    <button class="btn btn-primary">Agregar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
                 </div>
             </form>
         </div>
