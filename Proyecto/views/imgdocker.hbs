@@ -4,12 +4,12 @@
 <div class="container-fuid">
   <div class="row">
     <div class="col-lg-8 text-justify">
-      Las imágenes Docker contienen código de origen de aplicación ejecutable, así como todas 
-      las herramientas, bibliotecas y dependencias que el código de aplicación debe ejecutar 
-      como contenedor. Cuando ejecuta la imagen de Docker, se convierte en una instancia (o 
+      Las imágenes Docker contienen código de origen de aplicación ejecutable, así como todas
+      las herramientas, bibliotecas y dependencias que el código de aplicación debe ejecutar
+      como contenedor. Cuando ejecuta la imagen de Docker, se convierte en una instancia (o
       varias instancias) del contenedor.
-      Es posible crear una imagen de Docker desde cero, pero la mayoría de los desarrolladores 
-      los sacan de los repositorios comunes. Se pueden crear varias imágenes Docker a partir de 
+      Es posible crear una imagen de Docker desde cero, pero la mayoría de los desarrolladores
+      los sacan de los repositorios comunes. Se pueden crear varias imágenes Docker a partir de
       una única imagen base, y compartirán los puntos en común de su lote.
     </div>
     <div class="col-lg-4"></div>
@@ -18,22 +18,26 @@
 <div class="container-fuid">
   <div class="row">
     <div class="col-lg-8 text-justify">
-      Las imágenes Docker se componen de capas, y cada capa corresponde a una versión de la imagen. 
-      Cuando un desarrollador realiza cambios en la imagen, se crea una nueva capa superior, y esta 
-      capa superior sustituye a la capa superior anterior como la versión actual de la imagen. Las 
+      Las imágenes Docker se componen de capas, y cada capa corresponde a una versión de la imagen.
+      Cuando un desarrollador realiza cambios en la imagen, se crea una nueva capa superior, y esta
+      capa superior sustituye a la capa superior anterior como la versión actual de la imagen. Las
       capas anteriores se guardan para las retrotracciones o se vuelven a utilizar en otros proyectos.
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4 card-body container-flex-center">
+      <img
+        src="https://d33wubrfki0l68.cloudfront.net/a0a25740941dd8f2d6f7f4fe9d20d3c9e9770dcd/41526/images/docker/flujo_de_construccion_de_imagenes_y_contenedores_en_docker.png"
+        alt="">
+    </div>
   </div>
 </div>
 <div class="container-fuid">
   <div class="row">
     <div class="col-lg-8 text-justify">
-      Cada vez que se crea un contenedor a partir de una imagen de Docker, se crea otra nueva 
-      capa denominada capa de contenedor. Los cambios realizados en el contenedor, como la adición 
-      o supresión de archivos, sólo se guardan en la capa de contenedor y sólo existen mientras se 
-      ejecuta el contenedor. Este proceso iterativo de creación de imágenes permite aumentar la 
-      eficiencia general ya que varias instancias de contenedores en vivo pueden ejecutarse desde 
+      Cada vez que se crea un contenedor a partir de una imagen de Docker, se crea otra nueva
+      capa denominada capa de contenedor. Los cambios realizados en el contenedor, como la adición
+      o supresión de archivos, sólo se guardan en la capa de contenedor y sólo existen mientras se
+      ejecuta el contenedor. Este proceso iterativo de creación de imágenes permite aumentar la
+      eficiencia general ya que varias instancias de contenedores en vivo pueden ejecutarse desde
       una única imagen base, y cuando lo hacen, aprovechan un lote común.
     </div>
     <div class="col-lg-4"></div>
@@ -42,9 +46,9 @@
 <div class="container-fuid">
   <div class="row">
     <div class="col-lg-8 text-justify">
-      Son plantillas de lectura que sirven para crear un contenedor Docker. Normalmente las imágenes 
-      se crean basándose en otra agregando características propias. También se pueden crear imágenes 
-      publicadas en un registro de Docker. Esta tecnología de organización en contenedores es la que 
+      Son plantillas de lectura que sirven para crear un contenedor Docker. Normalmente las imágenes
+      se crean basándose en otra agregando características propias. También se pueden crear imágenes
+      publicadas en un registro de Docker. Esta tecnología de organización en contenedores es la que
       posibilita la creación y el uso de los contenedores de Linux.
 
     </div>
