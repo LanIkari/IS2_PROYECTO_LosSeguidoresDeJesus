@@ -1,18 +1,53 @@
 <div class="container-fluid container-header">
-    <h1 class="fw-bold">Imagenes Docker</h1>
+  <h1 class="fw-bold">Imagenes Docker</h1>
 </div>
 <div class="container-fuid">
-    <div class="row">
-        <div class="col-lg-8 text-justify">
-            Antecedente El Palacio de Bellas Artes tiene como antecedente inmediato al edificio que albergaba al antiguo
-            Teatro Nacional, considerado el más importante en su género en la vida artística y cultural de nuestro país
-            durante la segunda mitad del siglo xix. Al iniciarse el siglo xx, como parte del programa de obras
-            arquitectónicas con las que se estaba embelleciendo a la Ciudad de México, se pensó primero en renovarlo, pero
-            se optó por demolerlo para construir otro, acorde al crecimiento urbano y cultural de la Ciudad. La ubicación
-            del nuevo teatro fue objeto de un minucioso estudio tanto por parte de las autoridades como por su arquitecto,
-            el italiano Adamo Boari. Finalmente, en 1901 ya se había decidido que se situaría a un costado de la Alameda
-            Central.
-        </div>
-        <div class="col-lg-4"></div>
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      Las imágenes Docker contienen código de origen de aplicación ejecutable, así como todas 
+      las herramientas, bibliotecas y dependencias que el código de aplicación debe ejecutar 
+      como contenedor. Cuando ejecuta la imagen de Docker, se convierte en una instancia (o 
+      varias instancias) del contenedor.
+      Es posible crear una imagen de Docker desde cero, pero la mayoría de los desarrolladores 
+      los sacan de los repositorios comunes. Se pueden crear varias imágenes Docker a partir de 
+      una única imagen base, y compartirán los puntos en común de su lote.
     </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      Las imágenes Docker se componen de capas, y cada capa corresponde a una versión de la imagen. 
+      Cuando un desarrollador realiza cambios en la imagen, se crea una nueva capa superior, y esta 
+      capa superior sustituye a la capa superior anterior como la versión actual de la imagen. Las 
+      capas anteriores se guardan para las retrotracciones o se vuelven a utilizar en otros proyectos.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      Cada vez que se crea un contenedor a partir de una imagen de Docker, se crea otra nueva 
+      capa denominada capa de contenedor. Los cambios realizados en el contenedor, como la adición 
+      o supresión de archivos, sólo se guardan en la capa de contenedor y sólo existen mientras se 
+      ejecuta el contenedor. Este proceso iterativo de creación de imágenes permite aumentar la 
+      eficiencia general ya que varias instancias de contenedores en vivo pueden ejecutarse desde 
+      una única imagen base, y cuando lo hacen, aprovechan un lote común.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      Son plantillas de lectura que sirven para crear un contenedor Docker. Normalmente las imágenes 
+      se crean basándose en otra agregando características propias. También se pueden crear imágenes 
+      publicadas en un registro de Docker. Esta tecnología de organización en contenedores es la que 
+      posibilita la creación y el uso de los contenedores de Linux.
+
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
 </div>
