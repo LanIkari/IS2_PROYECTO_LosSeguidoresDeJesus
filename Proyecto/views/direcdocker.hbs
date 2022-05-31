@@ -2,123 +2,126 @@
   <h1 class="fw-bold">Directivas Docker File</h1>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
-      Un archivo Dockerfile  contiene instrucciones dirigidas al Docker Daemon para la construcción 
-      personalizada de una nueva imagen. A estas instrucciones o comandos también se 
+      Un archivo Dockerfile contiene instrucciones dirigidas al Docker Daemon para la construcción
+      personalizada de una nueva imagen. A estas instrucciones o comandos también se
       les conoce como directivas docker. Dichas instrucciones deben ir seguidas de argumentos.
-      <h6 class="fw-bold">Se recomienda que las directivas sean escritas en MAYÚSCULAS para su fácil reconocimiento y mantenimiento</h6>
+      <h6 class="fw-bold">Se recomienda que las directivas sean escritas en MAYÚSCULAS para su fácil reconocimiento y
+        mantenimiento</h6>
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>FROM</h4>
       </div>
-      Esta instrucción inicializa una nueva etapa de construcción y establece la imagen base para 
-      las instrucciones posteriores. Como tal, un válido Dockerfile debe comenzar con una FROM 
-      instrucción. La imagen puede ser cualquier imagen válida; es especialmente fácil comenzar 
+      Esta instrucción inicializa una nueva etapa de construcción y establece la imagen base para
+      las instrucciones posteriores. Como tal, un válido Dockerfile debe comenzar con una FROM
+      instrucción. La imagen puede ser cualquier imagen válida; es especialmente fácil comenzar
       extrayendo una imagen de los repositorios públicos .
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>RUN</h4>
       </div>
-      Ejecutará cualquier comando en una nueva capa encima de la imagen actual y confirmará los 
-      resultados. La imagen confirmada resultante se usará para el siguiente paso en el archivo 
-      Dockerfile. Las instrucciones en capas RUN y la generación de confirmaciones se ajustan a 
-      los conceptos básicos de Docker, donde las confirmaciones son baratas y los contenedores se 
+      Ejecutará cualquier comando en una nueva capa encima de la imagen actual y confirmará los
+      resultados. La imagen confirmada resultante se usará para el siguiente paso en el archivo
+      Dockerfile. Las instrucciones en capas RUN y la generación de confirmaciones se ajustan a
+      los conceptos básicos de Docker, donde las confirmaciones son baratas y los contenedores se
       pueden crear desde cualquier punto del historial de una imagen, como el control de origen.
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4 card-body container-flex-center">
+      <img src="https://ciberninjas.com/wp-content/uploads/2021/04/docker-tutorial.webp" alt="">
+    </div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>CMD</h4>
       </div>
-      Su principal objetivo es proporcionar valores predeterminados para un contenedor 
-      en ejecución. Estos valores predeterminados pueden incluir un ejecutable o pueden omitir el 
+      Su principal objetivo es proporcionar valores predeterminados para un contenedor
+      en ejecución. Estos valores predeterminados pueden incluir un ejecutable o pueden omitir el
       ejecutable, en cuyo caso también debe especificar una ENTRYPOINT instrucción.
-      Si CMD se usa para proporcionar argumentos predeterminados para la ENTRYPOINT instrucción, 
+      Si CMD se usa para proporcionar argumentos predeterminados para la ENTRYPOINT instrucción,
       tanto las instrucciones CMD como ENTRYPOINT deben especificarse con el formato de matriz JSON.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>LABEL</h4>
       </div>
-      Agrega metadatos a una imagen. A LABEL es un par clave-valor. Para incluir espacios dentro 
-      de un LABEL valor, use comillas y barras invertidas como lo haría en el análisis de línea de 
-      comandos. Las etiquetas incluidas en las imágenes base o principal (imágenes en la FROM línea) 
-      las hereda su imagen. Si ya existe una etiqueta pero con un valor diferente, el valor aplicado 
+      Agrega metadatos a una imagen. A LABEL es un par clave-valor. Para incluir espacios dentro
+      de un LABEL valor, use comillas y barras invertidas como lo haría en el análisis de línea de
+      comandos. Las etiquetas incluidas en las imágenes base o principal (imágenes en la FROM línea)
+      las hereda su imagen. Si ya existe una etiqueta pero con un valor diferente, el valor aplicado
       más recientemente anula cualquier valor establecido previamente.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>MAINTAINER</h4>
       </div>
-      Establece el campo Autor de las imágenes generadas. La LABEL instrucción es una versión mucho 
-      más flexible de esto y debe usarla en su lugar, ya que permite configurar los metadatos que 
+      Establece el campo Autor de las imágenes generadas. La LABEL instrucción es una versión mucho
+      más flexible de esto y debe usarla en su lugar, ya que permite configurar los metadatos que
       necesita y se puede ver fácilmente, por ejemplo, con docker inspect.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>EXPOSE</h4>
       </div>
-      Debe de informar a Docker que el contenedor escucha en los puertos de red especificados en 
-      tiempo de ejecución. Puede especificar si el puerto escucha en TCP o UDP, y el valor 
-      predeterminado es TCP si no se especifica el protocolo, en realidad no publica el puerto. 
-      Funciona como un tipo de documentación entre la persona que construye la imagen y la persona 
-      que ejecuta el contenedor, sobre qué puertos se pretende publicar. Para publicar realmente el 
-      puerto cuando se ejecuta el contenedor, use el -pindicador docker run para publicar y asignar 
-      uno o más puertos, o el -Pindicador para publicar todos los puertos expuestos y asignarlos a 
+      Debe de informar a Docker que el contenedor escucha en los puertos de red especificados en
+      tiempo de ejecución. Puede especificar si el puerto escucha en TCP o UDP, y el valor
+      predeterminado es TCP si no se especifica el protocolo, en realidad no publica el puerto.
+      Funciona como un tipo de documentación entre la persona que construye la imagen y la persona
+      que ejecuta el contenedor, sobre qué puertos se pretende publicar. Para publicar realmente el
+      puerto cuando se ejecuta el contenedor, use el -pindicador docker run para publicar y asignar
+      uno o más puertos, o el -Pindicador para publicar todos los puertos expuestos y asignarlos a
       puertos de orden superior.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>ENV</h4>
       </div>
-      Esta directiva establece la variable < key > de entorno en el valor < value >. Este valor estará 
-      en el entorno para todas las instrucciones posteriores en la etapa de construcción y también se 
-      puede reemplazar en línea en muchas. El valor se interpretará para otras variables de entorno, 
-      por lo que se eliminarán las comillas si no se escapan. Al igual que el análisis de la línea de 
-      comandos, se pueden usar comillas y barras invertidas para incluir espacios dentro de los valores.
+      Esta directiva establece la variable < key> de entorno en el valor < value>. Este valor estará
+          en el entorno para todas las instrucciones posteriores en la etapa de construcción y también se
+          puede reemplazar en línea en muchas. El valor se interpretará para otras variables de entorno,
+          por lo que se eliminarán las comillas si no se escapan. Al igual que el análisis de la línea de
+          comandos, se pueden usar comillas y barras invertidas para incluir espacios dentro de los valores.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>ADD</h4>
@@ -131,96 +134,98 @@
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>COPY</h4>
       </div>
-      Como su nombre lo dice, copia nuevos archivos o directorios < src > y los agrega al sistema de 
-      archivos del contenedor en la ruta < dest >. < src > Se pueden especificar varios recursos, pero 
-      las rutas de los archivos y directorios se interpretarán como relativas al origen del contexto de 
-      la compilación. Cada uno < src >puede contener comodines y la coincidencia se realizará utilizando 
-      la ruta de archivo de Go .
+      Como su nombre lo dice, copia nuevos archivos o directorios < src> y los agrega al sistema de
+        archivos del contenedor en la ruta < dest>. < src> Se pueden especificar varios recursos, pero
+            las rutas de los archivos y directorios se interpretarán como relativas al origen del contexto de
+            la compilación. Cada uno < src>puede contener comodines y la coincidencia se realizará utilizando
+              la ruta de archivo de Go .
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4 card-body container-flex-center">
+      <img src="https://miro.medium.com/max/1400/1*rtLO2QWTWYvSrAW7dQnb7g.png" alt="">
+    </div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>ENTRYPOINT</h4>
       </div>
-      Permite configurar un contenedor que se ejecutará como un ejecutable. Pero no está pensado para 
-      que se le pasen argumentos al correr el contenedor. La idea es utilizarlo como si fuera un 
+      Permite configurar un contenedor que se ejecutará como un ejecutable. Pero no está pensado para
+      que se le pasen argumentos al correr el contenedor. La idea es utilizarlo como si fuera un
       ejecutable y ejecute un comando por defecto al iniciar el contendor.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>VOLUME</h4>
       </div>
-      Instrucción crea un punto de montaje con el nombre especificado y lo marca como que 
+      Instrucción crea un punto de montaje con el nombre especificado y lo marca como que
       contiene volúmenes montados externamente desde un host nativo u otros contenedores.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>USER</h4>
       </div>
-      Establece el nombre de usuario (o UID) y, opcionalmente, el grupo de usuarios (o GID) que 
-      se usará al ejecutar la imagen y para cualquier correo electrónico RUN, CMD y ENTRYPOINT las 
+      Establece el nombre de usuario (o UID) y, opcionalmente, el grupo de usuarios (o GID) que
+      se usará al ejecutar la imagen y para cualquier correo electrónico RUN, CMD y ENTRYPOINT las
       instrucciones que le siguen en el archivo Dockerfile.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>WORKDIR</h4>
       </div>
-      Establece el directorio de trabajo para cualquier RUN, CMD, ENTRYPOINT e instrucciones COPY que 
-      ADD le siguen en el Dockerfile. Si la directiva no existe, se creará incluso si no se usa en ninguna 
-      Dockerfile instrucción posterior. La instrucción se puede utilizar varias veces en un 
-      archivo Dockerfile. Si se proporciona una ruta relativa, será relativa a la ruta de la WORKDIR 
+      Establece el directorio de trabajo para cualquier RUN, CMD, ENTRYPOINT e instrucciones COPY que
+      ADD le siguen en el Dockerfile. Si la directiva no existe, se creará incluso si no se usa en ninguna
+      Dockerfile instrucción posterior. La instrucción se puede utilizar varias veces en un
+      archivo Dockerfile. Si se proporciona una ruta relativa, será relativa a la ruta de la WORKDIR
       instrucción anterior.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>ARG</h4>
       </div>
-      Define una variable que los usuarios pueden pasar en tiempo de compilación al constructor con 
-      el docker build comando usando la --build-arg < varname > = < value > bandera. Si un usuario 
-      especifica un argumento de compilación que no se definió en el Dockerfile, la compilación 
-      genera una advertencia. Un Dockerfile puede incluir una o más ARG instrucciones.
+      Define una variable que los usuarios pueden pasar en tiempo de compilación al constructor con
+      el docker build comando usando la --build-arg < varname> = < value> bandera. Si un usuario
+          especifica un argumento de compilación que no se definió en el Dockerfile, la compilación
+          genera una advertencia. Un Dockerfile puede incluir una o más ARG instrucciones.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>ONBUILD</h4>
       </div>
-      Agrega a la imagen una instrucción de activación que se ejecutará en un momento posterior, 
-      cuando la imagen se use como base para otra compilación. El activador se ejecutará en el 
-      contexto de la compilación descendente, como si se hubiera insertado inmediatamente después 
+      Agrega a la imagen una instrucción de activación que se ejecutará en un momento posterior,
+      cuando la imagen se use como base para otra compilación. El activador se ejecutará en el
+      contexto de la compilación descendente, como si se hubiera insertado inmediatamente después
       de la FROM instrucción en el Dockerfile.
       Cualquier instrucción de compilación se puede registrar como disparador.
     </div>
@@ -228,39 +233,39 @@
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
-      Esto es útil si está creando una imagen que se usará como base para crear otras imágenes, 
-      por ejemplo, un entorno de creación de aplicaciones o un demonio que puede personalizarse 
+      Esto es útil si está creando una imagen que se usará como base para crear otras imágenes,
+      por ejemplo, un entorno de creación de aplicaciones o un demonio que puede personalizarse
       con una configuración específica del usuario.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>STOPSIGNAL </h4>
       </div>
-      Instrucción que establece la señal de llamada al sistema que se enviará al contenedor para salir. 
-      Esta señal puede ser un nombre de señal en el formato SIG < NAME >, o un número sin firmar que 
-      coincida con una posición en la tabla de llamadas al sistema del núcleo. La señal de parada 
-      predeterminada de la imagen se puede anular por contenedor, usando la --stop-signal bandera en 
-      docker run y docker create.
+      Instrucción que establece la señal de llamada al sistema que se enviará al contenedor para salir.
+      Esta señal puede ser un nombre de señal en el formato SIG < NAME>, o un número sin firmar que
+        coincida con una posición en la tabla de llamadas al sistema del núcleo. La señal de parada
+        predeterminada de la imagen se puede anular por contenedor, usando la --stop-signal bandera en
+        docker run y docker create.
     </div>
     <div class="col-lg-4"></div>
   </div>
 </div>
 <div class="container-fuid">
-  <div class="center">
+  <div class="row">
     <div class="col-lg-8 text-justify">
       <div class="container-fluid">
         <h4>SHELL</h4>
       </div>
-      Permite anular el shell predeterminado utilizado para la forma de shell de los comandos. 
+      Permite anular el shell predeterminado utilizado para la forma de shell de los comandos.
       La instrucción debe escribirse en formato JSON en un Dockerfile.
-      Esta directiva puede aparecer varias veces. Cada SHELL instrucción anula todas las SHELL 
+      Esta directiva puede aparecer varias veces. Cada SHELL instrucción anula todas las SHELL
       anteriores y afecta a todas las posteriores.
     </div>
     <div class="col-lg-4"></div>
