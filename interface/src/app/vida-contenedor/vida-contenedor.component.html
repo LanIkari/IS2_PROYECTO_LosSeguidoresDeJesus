@@ -4,14 +4,161 @@
 <div class="container-fuid">
   <div class="row">
     <div class="col-lg-8 text-justify">
-      Antecedente El Palacio de Bellas Artes tiene como antecedente inmediato al edificio que albergaba al antiguo
-      Teatro Nacional, considerado el más importante en su género en la vida artística y cultural de nuestro país
-      durante la segunda mitad del siglo xix. Al iniciarse el siglo xx, como parte del programa de obras
-      arquitectónicas con las que se estaba embelleciendo a la Ciudad de México, se pensó primero en renovarlo, pero
-      se optó por demolerlo para construir otro, acorde al crecimiento urbano y cultural de la Ciudad. La ubicación
-      del nuevo teatro fue objeto de un minucioso estudio tanto por parte de las autoridades como por su arquitecto,
-      el italiano Adamo Boari. Finalmente, en 1901 ya se había decidido que se situaría a un costado de la Alameda
-      Central.
+      Son las diferentes etapas por las que recorre un contenedor Docker con distintos comandos. 
+      Comienza desde que hacemos la descarga desde Dokcer Hub hasta que es removido o eliminado. 
+      Los diferentes estados que este puede manejar son 
+      <h3 class="fw-bold">Created, Started, Paused, Exited, Deleted. </h3>
+      A continuación, se presentan las etapas y los comandos que se utilizan en cada una de ellas, 
+      asi como su respectiva funcion:
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="fw-bold">Created</h3>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker run</h4>
+      </div>
+      Este comando primero crea una capa de contenedor grabable sobre la imagen especificada y 
+      luego la inicia usando el comando especificado. Es decir, la ejecución de Docker es equivalente 
+      a la API /containers/create then /containers/(id)/start. Un contenedor detenido se puede reiniciar 
+      con todos sus cambios anteriores intactos usando Docker Start. Vea docker ps -a para ver una lista 
+      de todos los contenedores.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker create</h4>
+      </div>
+      Crea una capa de contenedor grabable sobre la imagen especificada y la prepara para 
+      ejecutar con un comando especificado. La identificación del contenedor se imprime en
+      STDOUT. Esto es similar a docker run -d excepto que el contenedor nunca se inicia. 
+      Luego puede usar el docker start para iniciar el contenedor en cualquier momento.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      Esto es útil cuando desea crear una configuración de contenedor con anticipación para que esté lista, 
+      luego ejecutarla cuando se necesite. El estado inicial del nuevo contenedor es created.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker start</h4>
+      </div>
+      Da la indicacion de inicializacion en uno o más contenedores detenidos.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="fw-bold">Started</h3>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker restart</h4>
+      </div>
+      Resetea uno o más contenedores.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker stop</h4>
+      </div>
+      Detiene uno o más contenedores en ejecución.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker pause</h4>
+      </div>
+      El comando docker pause suspende todos los procesos en los contenedores especificados. 
+      En Linux, esto usa el congelador cgroup. Tradicionalmente, cuando se suspende un proceso, 
+      se utiliza la señal SIGSTOP, que se puede observar cuando el proceso se suspende. Con el 
+      congelador cgroup, el proceso no es consciente y no puede capturar, que se está suspendiendo, 
+      y posteriormente se reanuda. En Windows, solo se pueden pausar los contenedores de Hyper-V.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="fw-bold">Paused</h3>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker unpause</h4>
+      </div>
+      Este comando anula la suspensión de todos los procesos en los contenedores 
+      especificados. En Linux, hace esto usando el congelador cgroup.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="fw-bold">Exited</h3>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker rm</h4>
+      </div>
+      Retira uno o más contenedores.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker ps</h4>
+      </div>
+      Enlista todos los contenedores.
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="fw-bold">Deleted</h3>
+</div>
+<div class="container-fuid">
+  <div class="row">
+    <div class="col-lg-8 text-justify">
+      <div class="container-fluid">
+        <h4>docker kill</h4>
+      </div>
+      Este subcomando mata uno o más contenedores. El proceso principal dentro del contenedor se 
+      envía señal SIGKILL (predeterminado), o la señal que se especifica con la opción --signal. 
+      Puede eliminar un contenedor utilizando la ID, el prefijo de identificación o el nombre del 
+      contenedor.
     </div>
     <div class="col-lg-4"></div>
   </div>
